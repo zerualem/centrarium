@@ -80,7 +80,7 @@ social:
   - name: Facebook
     icon: facebook
     username: zerualem
-    url:https://facebook.com/zerualem
+    url: 
     desc: Friend me on Facebook
     share: true
 
