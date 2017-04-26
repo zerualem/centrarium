@@ -73,27 +73,27 @@ social:
   - name: Twitter
     icon: twitter
     username: zerualem
-    url: https://twitter.com/zerualem
+    url: https://twitter.com/zeru_alem
     desc: Follow me on Twitter
     share: true
 
   - name: Facebook
     icon: facebook
-    username: thebencentra
-    url:
+    username: zerualem
+    url:https://facebook.com/zerualem
     desc: Friend me on Facebook
     share: true
 
   - name: GitHub
     icon: github
-    username: bencentra
+    username: zerualem
     url: https://zerualem.github.com
     desc: Fork me on GitHub
     share: false
 
   - name: LinkedIn
     icon: linkedin
-    username: Ben Centra
+    username: Zeru Alem
     url: https://www.linkedin.com
     desc: Connect with me on LinkedIn
     share: true
@@ -119,12 +119,12 @@ social:
     desc: Follow me on Instagram
     share: false
 
-  - name: Pinterest
-    icon: pinterest
-    username:
-    url:
-    desc: Follow me on Pinterest
-    share: true
+ # - name: Pinterest
+  #  icon: pinterest
+  #  username:
+   # url:
+    # desc: Follow me on Pinterest
+    # share: true
 
  # - name: SoundCloud
   #  icon: soundcloud
