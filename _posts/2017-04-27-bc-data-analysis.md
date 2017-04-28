@@ -253,3 +253,6 @@ ggpairs(data=PCs,columns = 2:4, ggplot2::aes(color=segmentation))
 ```
 
 ![](bc_data_analysis_files/figure-markdown_github/unnamed-chunk-6-2.png)
+
+
+As it can be seen from the above plots the first 3 principal components separate the two classes some extent only, this is expected since the variance explained by these components is not large. Using the first few principal components might be enough for classification purpose. In the next section we will try to develop some classification models and compare them.
