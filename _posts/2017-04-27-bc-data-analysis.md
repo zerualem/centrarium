@@ -241,12 +241,6 @@ ggplot(pve.table, aes(x=z,y=cumpve))+geom_point()+geom_abline(intercept=0.95, sl
 Let's us plot the scatter plot matrix for the first 3 PCs.
 
 ``` r
-pairs(pca.out$x[,1:3], col=segmentation)
-```
-
-![](bc_data_analysis_files/figure-markdown_github/unnamed-chunk-6-1.png)
-
-``` r
 require(GGally)
 ```
 
