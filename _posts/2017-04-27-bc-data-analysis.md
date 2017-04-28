@@ -2,7 +2,7 @@
 layout: post
 title: "Breast cancer dataset analysis (From Wisconsin dataset)"
 date: 2017-04-27
-categories: machine learning
+categories: machine-learning
 tags: PCA modeling
 excerpt_separator: <!--more-->
 ---
