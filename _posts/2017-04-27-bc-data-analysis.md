@@ -4,6 +4,7 @@ title: "Breast cancer dataset analysis (From Wisconsin dataset)"
 date: 2017-04-27
 categories: machine-learning
 tags: PCA modeling
+author: Zerihun Bekele
 excerpt_separator: <!--more-->
 ---
 
@@ -169,7 +170,7 @@ library(corrplot)
 corrplot(correlations, order = "hclust", tl.cex=1, addrect = 8)
 ```
 
-![](bc_data_analysis_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![Correlation matrix](https://github.com/zerualem/zerualem.github.io/blob/master/_posts/bc_data_analysis_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 Let use the findcorrelation() function from caret package to remove highly correlated predictors
 
