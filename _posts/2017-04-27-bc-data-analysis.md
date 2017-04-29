@@ -5,7 +5,7 @@ date: 2017-04-27
 categories: machine-learning
 tags: PCA modeling
 author: Zerihun Bekele
-excerpt_separator: !--more--
+excerpt_separator: --more--
 ---
 
 Introduction
@@ -13,7 +13,7 @@ Introduction
 
 In this blog we will see how we can analyze and build simple predictive model using the breast cancer data from [Wisconsin dataset](https://www.kaggle.com/uciml/breast-cancer-wisconsin-data). The procedure adopted here follows the suggestions from Applied predictive modeling and Introduction to Statistical Learning books.
 
-!--more--
+--more--
 
 Let us first import the data:
 ----------------------------
