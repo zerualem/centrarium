@@ -22,7 +22,7 @@ baseurl: "/zerualem.github.io" # the subpath of your site, e.g. /blog/
 url: "http://zerualem.github.io" # the base hostname & protocol for your site
 cover: "/assets/header_image.jpg"
 logo: "/assets/Zlogo.gif"
-posturl: "https://raw.githubusercontent.com/zerualem/zerualem.github.io/master"
+posturl: "//raw.githubusercontent.com/zerualem/zerualem.github.io/master"
 
 # Build settings
 markdown: kramdown
