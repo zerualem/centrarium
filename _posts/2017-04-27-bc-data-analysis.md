@@ -170,7 +170,7 @@ library(corrplot)
 corrplot(correlations, order = "hclust", tl.cex=1, addrect = 8)
 ```
 
-![Correlation matrix]({{ site.url }}/_posts/bc_data_analysis_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![Correlation matrix]({{ site.baseurl }}/_posts/bc_data_analysis_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 Let use the findcorrelation() function from caret package to remove highly correlated predictors
 
