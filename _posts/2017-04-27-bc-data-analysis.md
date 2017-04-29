@@ -169,7 +169,7 @@ dim(correlations)
 library(corrplot)
 corrplot(correlations, order = "hclust", tl.cex=1, addrect = 8)
 ```
-
+![Correlation matrix](bc_data_analysis_files/figure-markdown_github/unnamed-chunk-2-1.png)
 ![Correlation matrix]({{ site.posturl }}/_posts/bc_data_analysis_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 Let use the findcorrelation() function from caret package to remove highly correlated predictors
@@ -234,13 +234,15 @@ pve.table = as.data.frame(cbind(z,pve, cumpve))
 ggplot(pve.table, aes(x=z,y=pve))+geom_point()
 ```
 
-![PVE plot]({{ site.url }}/_posts/bc_data_analysis_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![PVE plot]({{ site.posturl }}/_posts/bc_data_analysis_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![PVE plot](bc_data_analysis_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
 ``` r
 ggplot(pve.table, aes(x=z,y=cumpve))+geom_point()+geom_abline(intercept=0.95, slope = 0, color="red")
 ```
 
 ![Cummulative PVE plot](bc_data_analysis_files/figure-markdown_github/unnamed-chunk-5-2.png)
+![Cummulative PVE plot]({{ site.posturl }}/_posts/bc_data_analysis_files/figure-markdown_github/unnamed-chunk-5-2.png)
 
 Let's us plot the scatter plot matrix for the first 3 PCs.
 
