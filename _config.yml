@@ -43,7 +43,7 @@ highlightjs_theme: "monokai-sublime"
    # tag: '/tag/:name/'
 
 # Disqus comments
-# disqus_shortname: bencentra
+disqus_shortname: bencentra
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
