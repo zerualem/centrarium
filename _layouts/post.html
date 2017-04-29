@@ -120,7 +120,7 @@ comments: true
 {% endif %}
 
 {% if site.disqus_shortname %}
-<!-- {% unless page.disqus_disabled %} -->
+{% if page.comments  %} 
 <section class="disqus">
 	<div id="disqus_thread"></div>
 <script>
@@ -137,7 +137,7 @@ comments: true
     (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
         var d = document, s = d.createElement('script');
         
-        s.src = 'https://zerihunalemayehu.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
+        s.src = 'https://zerualem-github-io.disqus.com/embed.js';  // IMPORTANT: Replace EXAMPLE with your forum shortname!
         
         s.setAttribute('data-timestamp', +new Date());
         (d.head || d.body).appendChild(s);
@@ -161,7 +161,7 @@ comments: true
 	
 
 </section>
-<!-- {% endunless %} -->
+ {% endif %} 
 {% endif %}
 
 </div>
