@@ -234,7 +234,7 @@ pve.table = as.data.frame(cbind(z,pve, cumpve))
 ggplot(pve.table, aes(x=z,y=pve))+geom_point()
 ```
 
-![PVE plot](bc_data_analysis_files/figure-markdown_github/unnamed-chunk-5-1.png)
+![PVE plot]({{ site.url }}/_posts/bc_data_analysis_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
 ``` r
 ggplot(pve.table, aes(x=z,y=cumpve))+geom_point()+geom_abline(intercept=0.95, slope = 0, color="red")
