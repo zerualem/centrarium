@@ -1,5 +1,19 @@
+---
+layout: post
+title: "Machine learning Breast cancer prediction"
+date: 2017-05-06
+categories: machine-learning
+tags: PCA modeling
+author: Zerihun Bekele
+excerpt_separator: <!--more-->
+---
+
 Introduction
 ------------
+
+In this blog we will see how we can build and compare simple machine learning techniques in R for the breast cancer data from [Wisconsin dataset](https://www.kaggle.com/uciml/breast-cancer-wisconsin-data). I have already showed how we can do explanotary data analysis in my [previous post](https://zerualem.github.io/zerualem.github.io/machine-learning/2017/04/27/bc-data-analysis.html). Here some parts are repeated because they are need for the modeling task.
+
+<!--more-->
 
 The procedure adopted here follows the suggestions from Applied predictive modeling and Introduction to Statistical Learning books.
 
@@ -37,7 +51,9 @@ library(corrplot)
 corrplot(correlations, order = "hclust", tl.cex=1, addrect = 8)
 ```
 
-![](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![Correlation matrix](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-2-1.png)
+
+![Correlation matrix]({{ site.posturl }}/_posts/bc_data_prediction_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 Let use the findcorrelation() function from caret package to remove highly correlated predictors
 
@@ -116,7 +132,10 @@ knnFit <- train(y= diagnosis[indxTrain] ,
 plot(knnFit)
 ```
 
-![](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![KNN results](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-8-1.png)
+
+![KNN results]({{ site.posturl }}/_posts/bc_data_prediction_files/figure-markdown_github/unnamed-chunk-8-1.png)
+
 
 ``` r
 knnFit
@@ -209,7 +228,10 @@ perf <- performance(predob, "tpr", "fpr")
 plot(perf, color="red")
 ```
 
-![](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![KNN performance](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-9-1.png)
+
+![KNN performance]({{ site.posturl }}/_posts/bc_data_prediction_files/figure-markdown_github/unnamed-chunk-9-1.png)
+
 
 ``` r
 #The area under the curve
@@ -292,7 +314,10 @@ perf <- performance(predob, "tpr", "fpr")
 plot(perf, color="red")
 ```
 
-![](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-12-1.png)
+![Logistics ROC curve](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-12-1.png)
+
+![Logistics ROC curve]({{ site.posturl }}/_posts/bc_data_prediction_files/figure-markdown_github/unnamed-chunk-12-1.png)
+
 
 ``` r
 #The area under the curve
@@ -358,7 +383,10 @@ svmFit
 plot(svmFit)
 ```
 
-![](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-13-1.png)
+![SVM](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-13-1.png)
+
+![SVM]({{ site.posturl }}/_posts/bc_data_prediction_files/figure-markdown_github/unnamed-chunk-13-1.png)
+
 
 ** Refine and tune Use cross-validation to tune the SVM **
 
@@ -410,7 +438,10 @@ ggplot(svm.tune)
 
     ## Warning: Ignoring unknown aesthetics: shape
 
-![](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-14-1.png)
+![Tuned SVM](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-14-1.png)
+
+![Tuned SVM ]({{ site.posturl }}/_posts/bc_data_prediction_files/figure-markdown_github/unnamed-chunk-14-1.png)
+
 
 ``` r
 svm.tune$finalModel
@@ -479,7 +510,10 @@ perf <- performance(predob, "tpr", "fpr")
 plot(perf, color="red")
 ```
 
-![](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-16-1.png)
+![SVM ROC curve](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-16-1.png)
+
+![SVM ROC curve]({{ site.posturl }}/_posts/bc_data_prediction_files/figure-markdown_github/unnamed-chunk-16-1.png)
+
 
 ``` r
 #The area under the curve
