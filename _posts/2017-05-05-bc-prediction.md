@@ -53,7 +53,7 @@ corrplot(correlations, order = "hclust", tl.cex=1, addrect = 8)
 
 ![Correlation matrix](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
-![Correlation matrix]({{ site.posturl }}/_posts/bc_data_prediction_files/figure-markdown_github/unnamed-chunk-2-1.png)
+![Correlation matrix]({{ site.posturl }}/_posts/bc_data_predictions_files/figure-markdown_github/unnamed-chunk-2-1.png)
 
 Let use the findcorrelation() function from caret package to remove highly correlated predictors
 
@@ -134,7 +134,7 @@ plot(knnFit)
 
 ![KNN results](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-8-1.png)
 
-![KNN results]({{ site.posturl }}/_posts/bc_data_prediction_files/figure-markdown_github/unnamed-chunk-8-1.png)
+![KNN results]({{ site.posturl }}/_posts/bc_data_predictions_files/figure-markdown_github/unnamed-chunk-8-1.png)
 
 
 ``` r
@@ -230,7 +230,7 @@ plot(perf, color="red")
 
 ![KNN performance](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
-![KNN performance]({{ site.posturl }}/_posts/bc_data_prediction_files/figure-markdown_github/unnamed-chunk-9-1.png)
+![KNN performance]({{ site.posturl }}/_posts/bc_data_predictions_files/figure-markdown_github/unnamed-chunk-9-1.png)
 
 
 ``` r
@@ -316,7 +316,7 @@ plot(perf, color="red")
 
 ![Logistics ROC curve](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-12-1.png)
 
-![Logistics ROC curve]({{ site.posturl }}/_posts/bc_data_prediction_files/figure-markdown_github/unnamed-chunk-12-1.png)
+![Logistics ROC curve]({{ site.posturl }}/_posts/bc_data_predictions_files/figure-markdown_github/unnamed-chunk-12-1.png)
 
 
 ``` r
@@ -385,7 +385,7 @@ plot(svmFit)
 
 ![SVM](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-13-1.png)
 
-![SVM]({{ site.posturl }}/_posts/bc_data_prediction_files/figure-markdown_github/unnamed-chunk-13-1.png)
+![SVM]({{ site.posturl }}/_posts/bc_data_predictions_files/figure-markdown_github/unnamed-chunk-13-1.png)
 
 
 ** Refine and tune Use cross-validation to tune the SVM **
@@ -440,7 +440,7 @@ ggplot(svm.tune)
 
 ![Tuned SVM](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-14-1.png)
 
-![Tuned SVM ]({{ site.posturl }}/_posts/bc_data_prediction_files/figure-markdown_github/unnamed-chunk-14-1.png)
+![Tuned SVM ]({{ site.posturl }}/_posts/bc_data_predictions_files/figure-markdown_github/unnamed-chunk-14-1.png)
 
 
 ``` r
@@ -512,7 +512,7 @@ plot(perf, color="red")
 
 ![SVM ROC curve](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-16-1.png)
 
-![SVM ROC curve]({{ site.posturl }}/_posts/bc_data_prediction_files/figure-markdown_github/unnamed-chunk-16-1.png)
+![SVM ROC curve]({{ site.posturl }}/_posts/bc_data_predictions_files/figure-markdown_github/unnamed-chunk-16-1.png)
 
 
 ``` r
