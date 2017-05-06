@@ -226,14 +226,6 @@ confusionMatrix(knnPredict, diagnosis[-indxTrain] )
     ##        'Positive' Class : B               
     ## 
 
-``` r
-mean(knnPredict == testing$diagnosis)
-```
-
-    ## Warning in is.na(e2): is.na() applied to non-(list or vector) of type
-    ## 'NULL'
-
-    ## [1] NaN
 
 ``` r
 #Plot the ROC curve
@@ -299,7 +291,7 @@ logFit$results
 #exp(coef(log.fit$finalModel))
 ```
 
-Predict the probabilities for the test data
+**Predict the probabilities for the test data**
 
 Let's see how we can calculate the prediction accuracy for a specified cut of probability of success.
 
@@ -328,7 +320,7 @@ mean(log.preds==test.diagnosis)
 
     ## [1] 0.9507042
 
-ROC curve for logistic regression
+**ROC curve for logistic regression**
 
 ``` r
 #Plot the ROC curve
@@ -409,7 +401,7 @@ plot(svmFit)
 
 ![](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-13-1.png)
 
-Refine and tune Use cross-validation to tune the SVM
+** Refine and tune Use cross-validation to tune the SVM **
 
 ``` r
 grid <- expand.grid (sigma = c(0.045, 0.055, 0.06), C= c(3.5,4,4.5,5,5.5))
@@ -516,7 +508,7 @@ confusionMatrix(svmPredict, diagnosis[-indxTrain] )
     ##        'Positive' Class : B             
     ## 
 
-Plot the ROC curve
+** Plot the ROC curve **
 
 ``` r
 svm.probs <- predict(svm.tune, newdata=testing, type="prob")
