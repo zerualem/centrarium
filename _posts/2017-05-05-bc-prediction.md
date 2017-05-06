@@ -62,7 +62,7 @@ It might be beneficial to transform our data by scaling and centering. This will
 
 In addition to that we can transform the data for skewed predictors in our data.
 
-The caret package has nice packaged to help us transform our data as desired. Here we will use preProcess and predict function to transform the data and conduct PCA on the transformed data.
+The caret package has nice packaged to help us transform our data as desired. Here we will use preProcess and predict function to transform the data. I have already done this and also PCA on the transformed data in my [previous post](https://zerualem.github.io/zerualem.github.io/machine-learning/2017/04/27/bc-data-analysis.html).
 
 ``` r
 # define the transformation or pre-processing 
@@ -71,54 +71,13 @@ bc.trans <- preProcess(filteredBcData, method = c("BoxCox", "center", "scale"))
 bc.transformed <- predict(bc.trans, filteredBcData)
 #head(bc.transformed[,1:4])
 ```
-
-PCA and Proportion of variance explaind (PVE)
----------------------------------------------
-
-Here we conduct PCA on the transformed data and calculate the PVE using r base functions.
-
-``` r
-# Using 
-pca.out <- prcomp(bc.transformed)
-
-#calculate the variance deviation
-pca.var = pca.out$sdev^2
-
-#Calculate proportion of variance explained
-pve = pca.var/sum(pca.var)
-z = seq(1,17)
-
-#Calculate cummulative PVE
-cumpve = cumsum(pve)
-pve.table = as.data.frame(cbind(z,pve, cumpve))
-ggplot(pve.table, aes(x=z,y=pve))+geom_point(aes(size=pve, color=factor(pve)))+
-  guides(color=FALSE, size=FALSE)
-```
-
-![](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-5-1.png)
-
-``` r
-ggplot(pve.table, aes(x=z,y=cumpve))+geom_point()+geom_abline(intercept=0.95, slope = 0, color="red")
-```
-
-![](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-5-2.png)
-
-Let's us plot the scatter plot matrix for the first 3 PCs.
-
-``` r
-#pairs(pca.out$x[,1:3], col=diagnosis)
-require(GGally)
-```
-
-    ## Loading required package: GGally
-
-``` r
-PCs <- as.data.frame(cbind(diagnosis,pca.out$x))
-PCs$diagnosis <- diagnosis
-ggpairs(data=PCs,columns = 2:4, ggplot2::aes(color=diagnosis))
-```
-
-![](bc_data_predictions_files/figure-markdown_github/unnamed-chunk-6-1.png)
+    ##    area_mean smoothness_mean symmetry_mean fractal_dimension_mean
+    ## 1  1.1292186       1.4874017    1.96265106              1.9340037
+    ## 2  1.7111779      -0.8103020    0.09828705             -0.9448696
+    ## 3  1.5096864       0.9568640    0.97423453             -0.3015621
+    ## 4 -0.8425905       2.7601291    2.39661000              3.0107385
+    ## 5  1.6654085       0.3477375    0.08712188             -0.5139916
+    ## 6 -0.4045600       2.0122134    1.03023853              1.7204268
 
 Modeling
 --------
