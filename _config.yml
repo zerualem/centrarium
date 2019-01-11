@@ -198,3 +198,5 @@ protocols:
     os_repo: "https://github.com/"
     os_rcs_type: "git"
     os_src: ""
+
+theme: jekyll-theme-minimal
